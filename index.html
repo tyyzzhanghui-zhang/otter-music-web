@@ -10,8 +10,8 @@
 *{box-sizing:border-box;margin:0}
 html,body{height:100%}
 body{background:var(--bg);color:var(--tx);overflow:hidden;font:14px/1.5 "PingFang SC","Microsoft YaHei",system-ui,sans-serif}
-#app{display:grid;grid-template-columns:220px 1fr;grid-template-rows:1fr 92px;height:100vh}
-aside{background:var(--pn);border-right:1px solid var(--ln);padding:16px 12px;display:flex;flex-direction:column;gap:14px;overflow:auto}
+#app{display:grid;grid-template-columns:220px 1fr;grid-template-rows:minmax(0,1fr) 92px;height:100vh;overflow:hidden}
+aside{background:var(--pn);border-right:1px solid var(--ln);padding:16px 12px;display:flex;flex-direction:column;gap:14px;overflow:auto;min-height:0}
 .brand{display:flex;align-items:center;gap:9px;padding:0 6px 6px}
 .bdot{width:11px;height:11px;border-radius:50%;background:var(--ac);box-shadow:0 0 16px var(--ac)}
 .brand b{font-size:18px;letter-spacing:.3px}
@@ -23,7 +23,7 @@ aside{background:var(--pn);border-right:1px solid var(--ln);padding:16px 12px;di
 .fl{display:flex;flex-direction:column;gap:2px}
 .fl .it{padding:6px 9px;border-radius:7px;font-size:12px;color:#93a2b3;cursor:pointer;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .fl .it:hover{background:#111d29;color:#fff}
-main{display:flex;flex-direction:column;min-width:0}
+main{display:flex;flex-direction:column;min-width:0;min-height:0}
 #top{display:flex;gap:10px;align-items:center;padding:12px 18px;border-bottom:1px solid var(--ln)}
 #q{flex:1;height:42px;background:#0d1621;border:1px solid var(--ln);border-radius:11px;color:var(--tx);padding:0 14px;font:inherit;outline:none}
 #q:focus{border-color:#2c4a36}
@@ -31,7 +31,7 @@ main{display:flex;flex-direction:column;min-width:0}
 .b:hover{background:#16263a}
 .b.p{background:var(--ac);border-color:var(--ac);color:#04200f;font-weight:700}
 select{height:42px;border-radius:11px;border:1px solid var(--ln);background:#111c28;color:var(--tx);font:inherit;padding:0 8px}
-#bd{flex:1;overflow:auto;padding:16px 18px 22px}
+#bd{flex:1;overflow:auto;padding:16px 18px 22px;min-height:0}
 #hd{display:flex;align-items:baseline;gap:12px;margin-bottom:12px}
 #hd h2{font-size:24px}
 #hd s{color:var(--dm);font-size:13px;text-decoration:none}
